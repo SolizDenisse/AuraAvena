@@ -176,7 +176,7 @@
 
                 <!-- Showcase Image Box (Right) -->
                 <div class="lg:col-span-6 flex justify-center">
-                    <div class="relative w-full max-w-md lg:max-w-xl p-4">
+                    <div class="relative w-full max-w-xl mx-auto p-4 sm:p-6 lg:p-8">
                         <!-- Frame Background -->
                         <div
                             class="absolute inset-0 bg-gradient-to-tr from-avena/40 to-azulSuave/50 rounded-3xl transform rotate-3 -z-10 scale-105">
@@ -184,10 +184,9 @@
 
                         <!-- Main Bottle Render (Slider with Crossfade) -->
                         <div
-                            class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl bg-white border border-azulSuave">
+                            class="relative w-full aspect-[3/4] max-w-xl mx-auto overflow-hidden rounded-2xl shadow-2xl bg-white border border-azulSuave">
                             <img src="botella original.png" alt="Aura Leche de Avena Original"
-                                class="hero-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-300 opacity-100"
-                                style="padding: 1cm;"
+                                class="hero-slide absolute inset-0 w-full h-full object-contain p-4 sm:p-6 transition-opacity duration-300 opacity-100"
                                 onerror="this.src='https://placehold.co/600x600/FAFAF8/0D2B45?text=Aura+Original'">
                             <img src="frutilla1.png" alt="Aura Leche de Avena Frutilla"
                                 class="hero-slide absolute inset-0 w-full h-full p-2 object-contain transition-opacity duration-300 opacity-0"
@@ -230,7 +229,7 @@
                 <!-- Left Side: Imagen de Leche de Avena -->
                 <div class="relative rounded-2xl overflow-hidden shadow-xl border border-azulSuave">
                     <img src="leche de avena.jpg" alt="Leche de Avena Aura"
-                        class="w-full object-cover h-[500px]"
+                        class="w-full h-auto min-h-[260px] object-cover"
                         onerror="this.src='https://placehold.co/600x500/FAFAF8/0D2B45?text=Leche+de+Avena'">
                 </div>
 
@@ -302,11 +301,9 @@
                 <!-- Flavor Display Card (Left Side) -->
                 <div class="lg:col-span-5 p-4 rounded-3xl transition-all duration-500" id="flavor-card">
                     <div
-                        class="relative w-full aspect-square rounded-2xl overflow-hidden mb-6 flex items-center justify-center"
-                        style="height: calc(24rem + 2cm); width: calc(24rem + 2cm);">
+                        class="relative w-full max-w-xl aspect-square rounded-2xl overflow-hidden mb-6 flex items-center justify-center mx-auto">
                         <img id="flavor-image-display" src="botella original.png" alt="Aura Sabor"
-                            class="object-contain transition-all duration-500 transform hover:scale-110"
-                            style="height: calc(24rem + 2cm);">
+                            class="w-full h-full object-contain transition-all duration-500 transform hover:scale-110">
                         <span id="flavor-badge"
                             class="absolute top-4 right-4 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-azulConfianza shadow">Sabor
                             Original</span>
@@ -799,7 +796,7 @@
             chocolate: {
                 title: "Aura Chocolate",
                 description: "Deliciosa fusión de nuestra avena cremosa con cacao orgánico de origen ético. Un antojo dulce, intensamente chocolatoso pero libre de azúcares refinados y culpa.",
-                image: "chocolate2.png", // Referencing flavors image
+                image: "Chocolate2.png", // Referencing flavors image
                 badge: "Sabor Chocolate",
                 badgeBg: "bg-chocolate",
                 price: "12 Bs",
