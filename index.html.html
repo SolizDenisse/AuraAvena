@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura - Leche de Avena 100% Orgánica</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Configuration for Tailwind to align with Aura's brand colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azulProfundo: '#0D2B45',
+                        azulConfianza: '#2563EB',
+                        azulCielo: '#A8C5E8',
+                        azulSuave: '#E7F1FB',
+                        avena: '#F5E8D6',
+                        crema: '#FAFAF8',
+                        chocolate: '#4B2E20',
+                        cafe: '#3B2F23',
+                        frutilla: '#C73B6A'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-hover:hover {
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-crema text-azulProfundo font-sans antialiased overflow-x-hidden">
+
+    <!-- Banner Principal (Cabeza) -->
+    <div class="w-full flex justify-center items-center bg-white overflow-hidden">
+        <img src="cabeza.jpeg" alt="Aura Leche de Avena" class="w-full h-auto object-cover object-center block">
+    </div>
+
+    <header
+        class="sticky top-0 z-50 bg-crema/90 backdrop-blur-md border-b border-azulSuave transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="Gemini_Generated_Image_ahadwdahadwdahad-removebg-preview.png" alt="Aura Logo"
+                    class="h-12 w-12 object-contain transition-transform duration-300 group-hover:rotate-12"
+                    onerror="this.src='https://placehold.co/100x100/0D2B45/FAFAF8?text=Aura'">
+                <div class="flex flex-col">
+                    <span class="font-serif text-2xl font-bold tracking-wide text-azulProfundo leading-none">Aura</span>
+                    <span class="text-[10px] tracking-widest text-azulConfianza font-semibold uppercase">Leche de
+                        Avena</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#inicio"
+                    class="text-sm font-medium text-azulProfundo/80 hover:text-azulConfianza transition-colors">Inicio</a>
+                <a href="#beneficios"
+                    class="text-sm font-medium text-azulProfundo/80 hover:text-azulConfianza transition-colors">Beneficios</a>
+                <a href="#sabores"
+                    class="text-sm font-medium text-azulProfundo/80 hover:text-azulConfianza transition-colors">Sabores</a>
+                <a href="#recarga"
+                    class="text-sm font-medium text-azulProfundo/80 hover:text-azulConfianza transition-colors">Eco-Refill</a>
+                <a href="#contacto"
+                    class="text-sm font-medium text-azulProfundo/80 hover:text-azulConfianza transition-colors">Contacto</a>
+            </nav>
+
+            <!-- CTA & Mobile Menu Button -->
+            <div class="flex items-center gap-4">
+                <a href="#recarga"
+                    class="hidden sm:inline-flex items-center justify-center px-5  py-2.5 bg-azulConfianza text-white text-xs font-semibold uppercase tracking-wider rounded-full hover:bg-azulProfundo transition-all duration-300 shadow-sm hover:shadow-md">
+                    <i class="fa-solid fa-seedling mr-2"></i> Estación de Recarga
+                </a>
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-azulProfundo focus:outline-none p-2 rounded-lg hover:bg-azulSuave transition-colors">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-crema border-b border-azulSuave px-4 pt-2 pb-6 space-y-3 shadow-inner">
+            <a href="#inicio"
+                class="block py-2 text-base font-medium text-azulProfundo/80 hover:text-azulConfianza border-b border-azulSuave/50">Inicio</a>
+            <a href="#beneficios"
+                class="block py-2 text-base font-medium text-azulProfundo/80 hover:text-azulConfianza border-b border-azulSuave/50">Beneficios</a>
+            <a href="#sabores"
+                class="block py-2 text-base font-medium text-azulProfundo/80 hover:text-azulConfianza border-b border-azulSuave/50">Sabores</a>
+            <a href="#recarga"
+                class="block py-2 text-base font-medium text-azulProfundo/80 hover:text-azulConfianza border-b border-azulSuave/50">Eco-Refill</a>
+            <a href="#contacto"
+                class="block py-2 text-base font-medium text-azulProfundo/80 hover:text-azulConfianza">Contacto</a>
+            <a href="#recarga"
+                class="w-full inline-flex items-center justify-center px-5 py-3 bg-azulConfianza text-white text-sm font-semibold rounded-xl hover:bg-azulProfundo transition-all">
+                <i class="fa-solid fa-seedling mr-2"></i> Puesto de Recarga
+            </a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative bg-gradient-to-b from-crema to-white py-12 lg:py-24 overflow-hidden">
+        <!-- Background botanical decorations -->
+        <div class="absolute -top-12 -right-12 w-96 h-96 bg-azulSuave/40 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-12 left-12 w-80 h-80 bg-avena/30 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Content (Left) -->
+                <div class="lg:col-span-6 space-y-8 text-center lg:text-left">
+                    <span
+                        class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-avena text-azulProfundo/90 uppercase tracking-widest gap-2">
+                        <span class="w-2 h-2 rounded-full bg-azulConfianza animate-ping"></span> 100% Artesanal &
+                        Natural
+                    </span>
+
+                    <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-bold text-azulProfundo leading-[1.1]">
+                        Naturalmente buena.<br>
+                        <span class="text-azulConfianza italic font-normal">Todo el día.</span>
+                    </h1>
+
+                    <p class="text-lg text-azulProfundo/70 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Descubre la frescura de la avena pura. 100% vegetal, libre de lactosa, orgánica y sin
+                        conservantes artificiales ni azúcares refinados. Cuidamos cada gota para tu bienestar y el del
+                        planeta.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#sabores"
+                            class="px-8 py-4 bg-azulConfianza text-white font-medium rounded-full hover:bg-azulProfundo shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+                            Conoce nuestros sabores <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#recarga"
+                            class="px-8 py-4 bg-white text-azulProfundo border border-azulSuave font-medium rounded-full hover:bg-azulSuave shadow-sm hover:shadow transition-all duration-300">
+                            Nuestra Revolución Eco <i class="fa-solid fa-leaf text-emerald-600 ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Fast Features Row -->
+                    <div class="pt-8 border-t border-azulSuave/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                        <div>
+                            <div class="text-2xl font-bold text-azulConfianza">0%</div>
+                            <div class="text-xs font-semibold text-azulProfundo/60 uppercase">Azúcar Refinado</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-azulConfianza">100%</div>
+                            <div class="text-xs font-semibold text-azulProfundo/60 uppercase">Orgánico</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-azulConfianza">No</div>
+                            <div class="text-xs font-semibold text-azulProfundo/60 uppercase">Lácteos/Lactosa</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-azulConfianza">Sin</div>
+                            <div class="text-xs font-semibold text-azulProfundo/60 uppercase">Preservantes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Showcase Image Box (Right) -->
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="relative w-full max-w-md lg:max-w-xl p-4">
+                        <!-- Frame Background -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-avena/40 to-azulSuave/50 rounded-3xl transform rotate-3 -z-10 scale-105">
+                        </div>
+
+                        <!-- Main Bottle Render (Slider with Crossfade) -->
+                        <div
+                            class="relative w-full aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl bg-white border border-azulSuave">
+                            <img src="botella original.png" alt="Aura Leche de Avena Original"
+                                class="hero-slide absolute inset-0 w-full h-full object-contain transition-opacity duration-300 opacity-100"
+                                style="padding: 1cm;"
+                                onerror="this.src='https://placehold.co/600x600/FAFAF8/0D2B45?text=Aura+Original'">
+                            <img src="frutilla1.png" alt="Aura Leche de Avena Frutilla"
+                                class="hero-slide absolute inset-0 w-full h-full p-2 object-contain transition-opacity duration-300 opacity-0"
+                                onerror="this.src='https://placehold.co/600x600/FAFAF8/0D2B45?text=Aura+Frutilla'">
+                            <img src="cafe1.png" alt="Aura Leche de Avena Café"
+                                class="hero-slide absolute inset-0 w-full h-full p-2 object-contain transition-opacity duration-300 opacity-0"
+                                onerror="this.src='https://placehold.co/600x600/FAFAF8/0D2B45?text=Aura+Caf%C3%A9'">
+                            <img src="chocolate1.png" alt="Aura Leche de Avena Chocolate"
+                                class="hero-slide absolute inset-0 w-full h-full p-2 object-contain transition-opacity duration-300 opacity-0"
+                                onerror="this.src='https://placehold.co/600x600/FAFAF8/0D2B45?text=Aura+Chocolate'">
+                        </div>
+
+                        <!-- Circular Stamp -->
+                        <div
+                            class="absolute -bottom-6 -right-6 bg-white border-2 border-azulCielo p-4 rounded-full shadow-lg flex flex-col items-center justify-center w-28 h-28 transform -rotate-12 hover:rotate-0 transition-transform duration-300">
+                            <i class="fa-solid fa-heart text-red-500 text-xl animate-beat"></i>
+                            <span
+                                class="text-[10px] font-bold text-azulProfundo text-center mt-1 uppercase leading-tight">Producto
+                                100% Natural y Boliviano</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-azulConfianza uppercase tracking-widest">Compromiso Aura</h2>
+                <p class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-azulProfundo leading-tight">El
+                    propósito detrás de cada gota</p>
+                <p class="text-base text-azulProfundo/70">
+                    Creemos en un mañana más saludable. Nuestra receta combina ingredientes cultivados de manera
+                    sostenible para ofrecerte nutrición honesta sin comprometer el sabor.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side: Imagen de Leche de Avena -->
+                <div class="relative rounded-2xl overflow-hidden shadow-xl border border-azulSuave">
+                    <img src="leche de avena.jpg" alt="Leche de Avena Aura"
+                        class="w-full object-cover h-[500px]"
+                        onerror="this.src='https://placehold.co/600x500/FAFAF8/0D2B45?text=Leche+de+Avena'">
+                </div>
+
+                <!-- Right Side: Structured Values List -->
+                <div class="space-y-8">
+                    <!-- Value 1 -->
+                    <div
+                        class="flex gap-4 p-6 bg-crema rounded-2xl hover:bg-azulSuave/40 transition-colors border border-azulSuave/40">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-azulSuave flex items-center justify-center text-azulConfianza shrink-0">
+                            <i class="fa-solid fa-cow text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-azulProfundo">100% Libre de Lácteos</h3>
+                            <p class="text-sm text-azulProfundo/70 mt-1">Una alternativa perfecta y digestiva para
+                                personas intolerantes a la lactosa o que prefieren una alimentación basada enteramente
+                                en plantas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div
+                        class="flex gap-4 p-6 bg-crema rounded-2xl hover:bg-azulSuave/40 transition-colors border border-azulSuave/40">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-azulSuave flex items-center justify-center text-emerald-600 shrink-0">
+                            <i class="fa-solid fa-apple-whole text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-azulProfundo">Cero Azúcar Añadido</h3>
+                            <p class="text-sm text-azulProfundo/70 mt-1">Sin jarabes ocultos ni azúcar refinada.
+                                Endulzamos únicamente mediante la hidrólisis natural de la avena para un dulzor
+                                balanceado.</p>
+                        </div>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div
+                        class="flex gap-4 p-6 bg-crema rounded-2xl hover:bg-azulSuave/40 transition-colors border border-azulSuave/40">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-azulSuave flex items-center justify-center text-amber-600 shrink-0">
+                            <i class="fa-solid fa-droplet text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-azulProfundo">Sin Conservantes Artificiales</h3>
+                            <p class="text-sm text-azulProfundo/70 mt-1">Sin aditivos misteriosos, espesantes nocivos
+                                como la carragenina, ni colorantes artificiales. Sabor real directo del campo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sabores" class="py-20 bg-[#F3E5D4] transition-colors duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-azulConfianza uppercase tracking-widest">Nuestra Colección</h2>
+                <p class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-azulProfundo">Explora la pureza en
+                    cada sabor</p>
+                <p class="text-base text-azulProfundo/70">
+                    Seleccionamos granos de avena premium y los combinamos con ingredientes orgánicos para crear
+                    experiencias cremosas y únicas.
+                </p>
+            </div>
+
+            <!-- Flavor Interactive Switcher -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Flavor Display Card (Left Side) -->
+                <div class="lg:col-span-5 p-4 rounded-3xl transition-all duration-500" id="flavor-card">
+                    <div
+                        class="relative w-full aspect-square rounded-2xl overflow-hidden mb-6 flex items-center justify-center"
+                        style="height: calc(24rem + 2cm); width: calc(24rem + 2cm);">
+                        <img id="flavor-image-display" src="botella original.png" alt="Aura Sabor"
+                            class="object-contain transition-all duration-500 transform hover:scale-110"
+                            style="height: calc(24rem + 2cm);">
+                        <span id="flavor-badge"
+                            class="absolute top-4 right-4 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-azulConfianza shadow">Sabor
+                            Original</span>
+                    </div>
+
+                    <h3 id="flavor-title-display" class="font-serif text-2xl font-bold text-azulProfundo">Aura Original
+                    </h3>
+                    <p id="flavor-desc-display" class="text-sm text-azulProfundo/70 mt-2">La expresión más pura de la
+                        avena. Sabor suave, equilibrado y con una textura increíblemente cremosa, perfecta para beber
+                        sola, con tu café o en tus recetas favoritas.</p>
+
+                    <div class="mt-6 pt-6 border-t border-azulSuave flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-azulProfundo/50 uppercase font-semibold">Precio de Botella (300
+                                ml)</span>
+                            <div class="text-xl font-bold text-azulConfianza" id="flavor-price-display">12 Bs <span
+                                    class="text-xs text-azulProfundo/60 font-normal">con retorno (o 22 Bs sin
+                                    retorno)</span></div>
+                        </div>
+                        <div class="flex gap-2">
+                            <span
+                                class="w-8 h-8 rounded-full border border-azulSuave flex items-center justify-center text-xs"
+                                title="100% Orgánico"><i class="fa-solid fa-circle-check text-emerald-600"></i></span>
+                            <span
+                                class="w-8 h-8 rounded-full border border-azulSuave flex items-center justify-center text-xs"
+                                title="Vegano"><i class="fa-solid fa-seedling text-emerald-600"></i></span>
+                            <span
+                                class="w-8 h-8 rounded-full border border-azulSuave flex items-center justify-center text-xs"
+                                title="Sin Azúcar"><i class="fa-solid fa-candy-cane text-red-400"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flavor Selection Buttons & Palettes (Right Side) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-azulProfundo/60">Selecciona un Sabor para
+                        ver sus detalles:</h4>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                        <!-- Button Original -->
+                        <button onclick="switchFlavor('original')"
+                            class="flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-azulConfianza bg-azulSuave/40 text-left transition-all duration-300 hover:border-azulConfianza w-full"
+                            data-flavor="original">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-crema border border-azulSuave flex items-center justify-center shrink-0">
+                                <span class="w-6 h-6 rounded-full bg-[#FAFAF8] shadow border border-azulSuave"></span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-azulConfianza font-bold uppercase">Original</span>
+                                <h5 class="font-bold text-azulProfundo text-base">La Esencia Clásica</h5>
+                            </div>
+                        </button>
+
+                        <!-- Button Chocolate -->
+                        <button onclick="switchFlavor('chocolate')"
+                            class="flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-transparent bg-white text-left transition-all duration-300 hover:border-chocolate/40 hover:bg-chocolate/5 w-full"
+                            data-flavor="chocolate">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-crema border border-azulSuave flex items-center justify-center shrink-0">
+                                <span class="w-6 h-6 rounded-full bg-[#4B2E20] shadow"></span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-chocolate font-bold uppercase">Chocolate</span>
+                                <h5 class="font-bold text-azulProfundo text-base">Cacao Orgánico Intenso</h5>
+                            </div>
+                        </button>
+
+                        <!-- Button Café -->
+                        <button onclick="switchFlavor('cafe')"
+                            class="flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-transparent bg-white text-left transition-all duration-300 hover:border-cafe/40 hover:bg-cafe/5 w-full"
+                            data-flavor="cafe">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-crema border border-azulSuave flex items-center justify-center shrink-0">
+                                <span class="w-6 h-6 rounded-full bg-[#3B2F23] shadow"></span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-amber-800 font-bold uppercase">Café</span>
+                                <h5 class="font-bold text-azulProfundo text-base">Cold Brew & Avena</h5>
+                            </div>
+                        </button>
+
+                        <!-- Button Frutilla -->
+                        <button onclick="switchFlavor('frutilla')"
+                            class="flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-transparent bg-white text-left transition-all duration-300 hover:border-frutilla/40 hover:bg-frutilla/5 w-full"
+                            data-flavor="frutilla">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-crema border border-azulSuave flex items-center justify-center shrink-0">
+                                <span class="w-6 h-6 rounded-full bg-[#C73B6A] shadow"></span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-frutilla font-bold uppercase">Frutilla</span>
+                                <h5 class="font-bold text-azulProfundo text-base">Frescura Silvestre Real</h5>
+                            </div>
+                        </button>
+
+                    </div>
+
+                    <!-- Colors & Specs Reference -->
+                    <div class="bg-white p-6 rounded-2xl border border-azulSuave/60 space-y-4">
+                        <h5 class="font-bold text-sm text-azulProfundo"> ¡Tenemos más sabores deliciosos para disfrutar!
+                        </h5>
+                        <p class="text-xs text-azulProfundo/70 leading-relaxed">¿Quieres conocerlos todos, proponer una
+                            combinación loca o pedir un sabor especial? ¡Hablemos y creemos el sabor de tus sueños!</p>
+                        <div class="pt-2">
+                            <a href="#contacto"
+                                class="inline-flex items-center gap-2 px-5 py-2.5 bg-azulConfianza hover:bg-azulProfundo text-white text-xs font-semibold uppercase tracking-wider rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                                <i class="fa-solid fa-comments"></i> ¡Escríbenos y charlemos!
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recarga" class="py-24 bg-azulProfundo text-white relative overflow-hidden">
+        <!-- Clean organic circle shape backdrops -->
+        <div class="absolute top-0 right-0 w-80 h-80 bg-azulConfianza/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-emerald-900/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Information Column -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span
+                        class="inline-flex items-center px-4 py-1 bg-emerald-500/10 text-emerald-400 rounded-full text-xs font-semibold uppercase tracking-widest border border-emerald-500/20">
+                        <i class="fa-solid fa-recycle mr-2"></i> Retorno Ecológico Aura
+                    </span>
+
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold leading-tight">
+                        Únete al Compromiso<br>
+                        <span class="text-azulCielo italic font-normal">Eco-Retorno Aura</span>
+                    </h2>
+
+                    <p class="text-white/80 text-lg font-light leading-relaxed">
+                        ¿Sabías que puedes reducir tu impacto ambiental y tu gasto al mismo tiempo? Cuidamos el planeta
+                        botella a botella. Te ofrecemos nuestra Leche de Avena en envases retornables de 300 ml. Si
+                        decides quedarte con la botella, el precio es de 22 Bs. Pero si devuelves tu botella vacía en tu
+                        próxima compra, ¡solo pagas 12 Bs!
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
+                            <div class="text-3xl font-extrabold text-emerald-400 mb-1">100%</div>
+                            <div class="text-sm font-semibold uppercase tracking-wider text-white/75">Vidrio Circular
+                            </div>
+                            <p class="text-xs text-white/60 mt-1">Reutilizamos cada botella esterilizada bajo altos
+                                estándares.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-5 rounded-2xl">
+                            <div class="text-3xl font-extrabold text-emerald-400 mb-1">-45%</div>
+                            <div class="text-sm font-semibold uppercase tracking-wider text-white/75">Ahorro Directo
+                            </div>
+                            <p class="text-xs text-white/60 mt-1">Te descontamos 10 Bs por botella retornada en tu
+                                compra.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#contacto"
+                            class="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-500 text-white font-semibold rounded-full hover:bg-emerald-600 transition-colors shadow-lg">
+                            <i class="fa-solid fa-location-dot"></i> Encuentra tu punto de retorno más cercano
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Eco Calculator Column (Interactive Widget) -->
+                <div
+                    class="lg:col-span-6 bg-white text-azulProfundo p-8 rounded-3xl shadow-2xl border border-azulSuave">
+                    <h3 class="font-serif text-2xl font-bold mb-2">Simulador de Impacto</h3>
+                    <p class="text-sm text-azulProfundo/60 mb-6">Calcula cuántas botellas reutilizas y cuánto dinero
+                        ahorras anualmente al sumarte al compromiso de Eco-Retorno de Aura.</p>
+
+                    <div class="space-y-6">
+                        <!-- Slider 1: Consumo Semanal -->
+                        <div>
+                            <div class="flex justify-between text-sm font-bold mb-2">
+                                <span>Botellas consumidas:</span>
+                                <span class="text-azulConfianza" id="liters-val">4 Botellas / semana</span>
+                            </div>
+                            <input type="range" id="liters-slider" min="1" max="25" value="4"
+                                class="w-full h-2 bg-azulSuave rounded-lg appearance-none cursor-pointer accent-azulConfianza">
+                        </div>
+
+                        <!-- Flat pricing display card -->
+                        <div>
+                            <div class="p-4 bg-crema border border-azulSuave rounded-xl">
+                                <div
+                                    class="text-xs font-bold text-azulProfundo/65 uppercase tracking-wider mb-2 text-center">
+                                    Precios por botella de 300ml:</div>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-white p-2.5 rounded-lg border border-azulSuave/60 text-center">
+                                        <div class="text-[10px] text-azulProfundo/50 leading-tight">Devolviendo botella
+                                        </div>
+                                        <div class="text-base font-bold text-emerald-600">12 Bs</div>
+                                    </div>
+                                    <div class="bg-white p-2.5 rounded-lg border border-azulSuave/60 text-center">
+                                        <div class="text-[10px] text-azulProfundo/50 leading-tight">Quedándote botella
+                                        </div>
+                                        <div class="text-base font-bold text-azulConfianza">22 Bs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Results Output Cards -->
+                        <div class="grid grid-cols-2 gap-4 pt-4 border-t border-azulSuave">
+                            <!-- Plastic Savings -->
+                            <div
+                                class="bg-emerald-50 p-4 rounded-2xl border border-emerald-100 flex flex-col justify-center">
+                                <span class="text-xs text-emerald-800 font-bold uppercase tracking-wide">Botellas
+                                    Reutilizadas</span>
+                                <div class="text-3xl font-extrabold text-emerald-600 mt-1" id="plastic-saved-val">208
+                                </div>
+                                <span class="text-[10px] text-emerald-700 font-medium">Envases de 300ml al año</span>
+                            </div>
+
+                            <!-- Cash Savings -->
+                            <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100 flex flex-col justify-center">
+                                <span class="text-xs text-blue-800 font-bold uppercase tracking-wide">Ahorro de
+                                    Dinero</span>
+                                <div class="text-3xl font-extrabold text-azulConfianza mt-1" id="money-saved-val">
+                                    Bs 2.080</div>
+                                <span class="text-[10px] text-blue-700 font-medium">Bolivianos anuales</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-azulConfianza uppercase tracking-widest">Transparencia Total</h2>
+                <p class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-azulProfundo">Inspector de
+                    Ingredientes</p>
+                <p class="text-base text-azulProfundo/70">
+                    Selecciona cualquier ingrediente para auditar su procedencia y certificar su pureza 100% natural.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Ingredient 1 -->
+                <div
+                    class="bg-crema p-8 rounded-3xl border border-azulSuave/80 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-avena flex items-center justify-center text-azulProfundo font-bold text-2xl mb-6">
+                        🌾</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Avena Orgánica Premium</h3>
+                    <p class="text-sm text-azulProfundo/70 leading-relaxed">
+                        Cultivada sin pesticidas químicos ni fertilizantes sintéticos. Procesada delicadamente a bajas
+                        temperaturas para conservar el betaglucano (fibra saludable).
+                    </p>
+                </div>
+
+                <!-- Ingredient 2 -->
+                <div
+                    class="bg-crema p-8 rounded-3xl border border-azulSuave/80 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-azulSuave flex items-center justify-center text-azulConfianza font-bold text-2xl mb-6">
+                        💧</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Agua Purificada de Manantial</h3>
+                    <p class="text-sm text-azulProfundo/70 leading-relaxed">
+                        Sometida a un proceso riguroso de filtrado natural de tres fases. Libre de metales pesados,
+                        cloro o aditivos químicos para la máxima frescura.
+                    </p>
+                </div>
+
+                <!-- Ingredient 3 -->
+                <div
+                    class="bg-crema p-8 rounded-3xl border border-azulSuave/80 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center">
+                    <div
+                        class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-2xl mb-6">
+                        🍫</div>
+                    <h3 class="font-serif text-xl font-bold mb-2">Saborizantes 100% Reales</h3>
+                    <p class="text-sm text-azulProfundo/70 leading-relaxed">
+                        Utilizamos cacao orgánico auténtico, extracto de vainilla natural, frutillas silvestres
+                        maceradas y café de especialidad seleccionado. Nunca polvos sintéticos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-crema">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                <!-- Information & Text Block -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="font-serif text-4xl font-bold text-azulProfundo">Hablemos de avena</h2>
+                    <p class="text-base text-azulProfundo/70 leading-relaxed">
+                        ¿Tienes dudas sobre nuestros ingredientes, te interesa llevar Aura a tu cafetería o quieres
+                        proponer un nuevo punto de recarga en tu barrio? Escríbenos y nuestro equipo te responderá de
+                        inmediato.
+                    </p>
+
+                    <!-- Contact details -->
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-azulSuave flex items-center justify-center text-azulConfianza">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-azulProfundo/50 uppercase font-semibold">WhatsApp</span>
+                                <a href="https://wa.me/59162686461?text=hola%20me%20interesa%20saber%20mas%20sobre%20su%20producto"
+                                    target="_blank" rel="noreferrer"
+                                    class="text-sm font-bold text-azulProfundo hover:text-azulConfianza transition-colors inline-block">
+                                    +591 62686461
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-azulSuave flex items-center justify-center text-azulConfianza">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-azulProfundo/50 uppercase font-semibold">Horario de
+                                    atención</span>
+                                <p class="text-sm font-bold text-azulProfundo">Lunes a Viernes: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links removed per user request -->
+                </div>
+
+                <!-- Interactive Form Block -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-azulSuave">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div>
+                            <label for="name"
+                                class="block text-xs font-bold text-azulProfundo/70 uppercase mb-2">Nombre
+                                completo</label>
+                            <input required type="text" id="name" maxlength="50"
+                                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+"
+                                class="w-full px-4 py-3 bg-crema border border-azulSuave rounded-xl focus:ring-2 focus:ring-azulConfianza focus:outline-none text-sm"
+                                placeholder="Tu nombre"
+                                title="Solo se permiten caracteres alfabéticos (máximo 50 caracteres)">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-xs font-bold text-azulProfundo/70 uppercase mb-2">Teléfono</label>
+                            <input required type="tel" id="phone" maxlength="20"
+                                pattern="[0-9+]+"
+                                class="w-full px-4 py-3 bg-crema border border-azulSuave rounded-xl focus:ring-2 focus:ring-azulConfianza focus:outline-none text-sm"
+                                placeholder="+591 6xxxxxxx"
+                                title="Solo se permiten números y el símbolo + (máximo 20 caracteres)">
+                        </div>
+
+                        <div>
+                            <label for="subject"
+                                class="block text-xs font-bold text-azulProfundo/70 uppercase mb-2">Asunto</label>
+                            <select id="subject"
+                                class="w-full px-4 py-3 bg-crema border border-azulSuave rounded-xl focus:ring-2 focus:ring-azulConfianza focus:outline-none text-sm">
+                                <option value="general">Consulta General</option>
+                                <option value="refill">Punto de Recarga / Eco-Refill</option>
+                                <option value="comercial">Distribución Comercial</option>
+                                <option value="feedback">Sugerencias y Comentarios</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message"
+                                class="block text-xs font-bold text-azulProfundo/70 uppercase mb-2">Mensaje</label>
+                            <textarea required id="message" rows="4" maxlength="100"
+                                class="w-full px-4 py-3 bg-crema border border-azulSuave rounded-xl focus:ring-2 focus:ring-azulConfianza focus:outline-none text-sm resize-none"
+                                placeholder="¿En qué te podemos ayudar? (máximo 100 caracteres)"></textarea>
+                        </div>
+
+                        <!-- Custom Message Box for alert bypass -->
+                        <div id="form-feedback-message" class="hidden p-4 rounded-xl text-sm flex gap-2 items-center">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span id="feedback-text">¡Mensaje enviado con éxito! Nos pondremos en contacto
+                                pronto.</span>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 bg-azulProfundo text-white font-semibold rounded-xl hover:bg-azulConfianza transition-all duration-300 shadow hover:shadow-md uppercase tracking-wider text-xs">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-azulSuave/80 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 pb-12 border-b border-azulSuave/60">
+                <!-- Brand Column -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-3">
+                        <img src="Gemini_Generated_Image_ahadwdahadwdahad-removebg-preview.png" alt="Aura Logo"
+                            class="h-10 w-10 object-contain"
+                            onerror="this.src='https://placehold.co/100x100/0D2B45/FAFAF8?text=Aura'">
+                        <span class="font-serif text-xl font-bold tracking-wide text-azulProfundo">Aura</span>
+                    </a>
+                    <p class="text-xs text-azulProfundo/60 leading-relaxed">
+                        Dedicados a crear la leche de avena más pura y sustentable para tu familia y el planeta.
+                    </p>
+                    <div class="text-[11px] text-azulConfianza font-semibold">
+                        <i class="fa-solid fa-heart mr-1"></i> Buenas para ti, mejor para el planeta.
+                    </div>
+                </div>
+
+                <!-- Nav Links Column -->
+                <div>
+                    <h4 class="text-xs font-bold text-azulProfundo/80 uppercase tracking-widest mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm text-azulProfundo/60">
+                        <li><a href="#inicio" class="hover:text-azulConfianza transition-colors">Inicio</a></li>
+                        <li><a href="#beneficios" class="hover:text-azulConfianza transition-colors">Beneficios</a></li>
+                        <li><a href="#sabores" class="hover:text-azulConfianza transition-colors">Sabores</a></li>
+                        <li><a href="#recarga" class="hover:text-azulConfianza transition-colors">Eco-Refill</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Column -->
+                <div>
+                    <h4 class="text-xs font-bold text-azulProfundo/80 uppercase tracking-widest mb-4">Soporte</h4>
+                    <ul class="space-y-2 text-sm text-azulProfundo/60">
+                        <li><a href="#" class="hover:text-azulConfianza transition-colors">Políticas de Privacidad</a>
+                        </li>
+                        <li><a href="#" class="hover:text-azulConfianza transition-colors">Términos del Servicio</a>
+                        </li>
+                        <li><a href="#contacto" class="hover:text-azulConfianza transition-colors">Contacto directo</a>
+                        </li>
+                        <li><a href="#" class="hover:text-azulConfianza transition-colors">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter column removed per user request -->
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                    <span class="text-xs text-azulProfundo/50">&copy; 2026</span>
+                    <span class="text-xs text-azulProfundo/50">Designed &amp; Developed by <a href="https://github.com/SolizDenisse" target="_blank" rel="noreferrer" class="text-xs text-azulProfundo/50 hover:text-azulConfianza">🪷SaShaBloom🪷</a></span>
+                </div>
+
+                <div class="flex gap-4 text-xs text-azulProfundo/40">
+                    <span>🌱 Orgánico Certificado</span>
+                    <span>🍶 Eco-Consciente</span>
+                    <span>🥛 Sin Lactosa</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Flavor Data
+        const flavors = {
+            original: {
+                title: "Aura Original",
+                description: "La expresión más pura de la avena. Sabor suave, equilibrado y con una textura increíblemente cremosa, perfecta para beber sola, con tu café o en tus recetas favoritas.",
+                image: "botella1.png",
+                badge: "Sabor Original",
+                badgeBg: "bg-azulConfianza",
+                price: "12 Bs",
+                cardBorder: "border-azulConfianza",
+                colorTheme: "azulConfianza",
+                sectionBg: "bg-[#F3E5D4]"
+            },
+            chocolate: {
+                title: "Aura Chocolate",
+                description: "Deliciosa fusión de nuestra avena cremosa con cacao orgánico de origen ético. Un antojo dulce, intensamente chocolatoso pero libre de azúcares refinados y culpa.",
+                image: "Chocolate2.png", // Referencing flavors image
+                badge: "Sabor Chocolate",
+                badgeBg: "bg-chocolate",
+                price: "12 Bs",
+                cardBorder: "border-chocolate/40",
+                colorTheme: "chocolate",
+                sectionBg: "bg-[#E4C8B4]"
+            },
+            cafe: {
+                title: "Aura Café",
+                description: "El boost de energía perfecto. Combinación armónica de cold brew de especialidad tostado localmente y nuestra base suave de leche de avena.",
+                image: "cafe2.png", // Referencing flavors image
+                badge: "Sabor Café",
+                badgeBg: "bg-cafe",
+                price: "12 Bs",
+                cardBorder: "border-cafe/40",
+                colorTheme: "cafe",
+                sectionBg: "bg-[#DFCFBE]"
+            },
+            frutilla: {
+                title: "Aura Frutilla",
+                description: "Refrescante, veraniega y deliciosa. Elaborada con pulpa real de frutillas orgánicas seleccionadas. Dulzor natural que encantará a chicos y grandes.",
+                image: "frutilla2.png", // Referencing flavors image
+                badge: "Sabor Frutilla",
+                badgeBg: "bg-frutilla",
+                price: "12 Bs",
+                cardBorder: "border-frutilla/40",
+                colorTheme: "frutilla",
+                sectionBg: "bg-[#F9D4DC]"
+            }
+        };
+
+        // Flavor Switcher function
+        function switchFlavor(flavorKey) {
+            const data = flavors[flavorKey];
+            if (!data) return;
+
+            // Update section background color with transition
+            const section = document.getElementById('sabores');
+            if (section && data.sectionBg) {
+                section.className = `py-20 transition-colors duration-500 ${data.sectionBg}`;
+            }
+
+            // Visual adjustments on components
+            const displayImage = document.getElementById('flavor-image-display');
+            const displayTitle = document.getElementById('flavor-title-display');
+            const displayDesc = document.getElementById('flavor-desc-display');
+            const displayPrice = document.getElementById('flavor-price-display');
+            const displayBadge = document.getElementById('flavor-badge');
+            const displayCard = document.getElementById('flavor-card');
+
+            // Apply transition effects
+            displayCard.style.opacity = '0.5';
+            displayCard.style.transform = 'scale(0.98)';
+
+            setTimeout(() => {
+                // Update fields
+                displayImage.src = data.image;
+                displayTitle.innerText = data.title;
+                displayDesc.innerText = data.description;
+                displayPrice.innerHTML = `${data.price} <span class="text-xs text-azulProfundo/60 font-normal">con retorno (o 22 Bs sin retorno de 300 ml)</span>`;
+
+                // Badge design
+                displayBadge.innerText = data.badge;
+                displayBadge.className = `absolute top-4 right-4 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-white ${data.badgeBg} shadow`;
+
+                // Reset transitions
+                displayCard.style.opacity = '1';
+                displayCard.style.transform = 'scale(1)';
+            }, 200);
+
+            // Update button active state borders
+            document.querySelectorAll('.flavor-btn').forEach(btn => {
+                const btnFlavor = btn.getAttribute('data-flavor');
+                if (btnFlavor === flavorKey) {
+                    // Active state
+                    if (flavorKey === 'original') btn.className = "flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-azulConfianza bg-azulSuave/40 text-left transition-all duration-300 w-full";
+                    if (flavorKey === 'chocolate') btn.className = "flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-chocolate bg-chocolate/10 text-left transition-all duration-300 w-full";
+                    if (flavorKey === 'cafe') btn.className = "flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-cafe bg-cafe/10 text-left transition-all duration-300 w-full";
+                    if (flavorKey === 'frutilla') btn.className = "flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-frutilla bg-frutilla/10 text-left transition-all duration-300 w-full";
+                } else {
+                    // Inactive state reset
+                    btn.className = "flavor-btn flex items-center gap-4 p-4 rounded-2xl border-2 border-transparent bg-white text-left transition-all duration-300 hover:bg-crema w-full";
+                }
+            });
+        }
+
+        const litersSlider = document.getElementById('liters-slider');
+        const litersVal = document.getElementById('liters-val');
+        const plasticSavedVal = document.getElementById('plastic-saved-val');
+        const moneySavedVal = document.getElementById('money-saved-val');
+
+        function calculateSavings() {
+            const bottles = parseInt(litersSlider.value);
+
+            // UI text update
+            litersVal.innerText = `${bottles} ${bottles === 1 ? 'Botella' : 'Botellas'} / semana`;
+
+            // Bottle calculations (1 bottle per unit, 52 weeks in a year)
+            const bottlesSavedYearly = bottles * 52;
+            plasticSavedVal.innerText = bottlesSavedYearly;
+
+            // Money calculations: 10 Bs saved per bottle returned
+            const yearlySavings = bottles * 10 * 52;
+
+            // Format Boliviano (e.g. Bs 2.080)
+            const formatter = new Intl.NumberFormat('es-BO', {
+                style: 'currency',
+                currency: 'BOB',
+                maximumFractionDigits: 0
+            });
+
+            moneySavedVal.innerText = formatter.format(yearlySavings);
+        }
+
+        // Connect events to calculator
+        litersSlider.addEventListener('input', calculateSavings);
+
+        // Initial run
+        calculateSavings();
+
+        // Sanitize function to prevent XSS/injection attacks
+        function sanitizeInput(input) {
+            if (!input) return '';
+            // Escape HTML special characters
+            const div = document.createElement('div');
+            div.textContent = input;
+            let sanitized = div.innerHTML;
+            
+            // Remove any potential script tags, event handlers, and dangerous attributes
+            sanitized = sanitized.replace(/<script[^>]*>.*?<\/script>/gi, '');
+            sanitized = sanitized.replace(/on\w+\s*=\s*["'][^"']*["']/gi, '');
+            sanitized = sanitized.replace(/javascript:/gi, '');
+            sanitized = sanitized.replace(/<iframe[^>]*>.*?<\/iframe>/gi, '');
+            
+            return sanitized;
+        }
+
+        // Contact Form Handler (Simulated success feedback box to avoid using alert)
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const feedbackBox = document.getElementById('form-feedback-message');
+            const form = document.getElementById('contact-form');
+
+            // Collect form values and sanitize ALL fields
+            const name = sanitizeInput(document.getElementById('name').value.trim());
+            const phone = sanitizeInput(document.getElementById('phone').value.trim());
+            const subject = sanitizeInput(document.getElementById('subject').value.trim());
+            const message = sanitizeInput(document.getElementById('message').value.trim());
+
+            // Validate phone contains only numbers and +
+            if (!/^[0-9+]*$/.test(phone)) {
+                feedbackBox.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800');
+                feedbackBox.classList.add('bg-red-50', 'text-red-800', 'border', 'border-red-200');
+                document.getElementById('feedback-text').innerText = "El teléfono contiene caracteres inválidos.";
+                return;
+            }
+
+            // Validate name contains only alphabetic characters
+            if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(name)) {
+                feedbackBox.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800');
+                feedbackBox.classList.add('bg-red-50', 'text-red-800', 'border', 'border-red-200');
+                document.getElementById('feedback-text').innerText = "El nombre contiene caracteres inválidos.";
+                return;
+            }
+
+            // Validate message length
+            if (message.length > 100) {
+                feedbackBox.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-800');
+                feedbackBox.classList.add('bg-red-50', 'text-red-800', 'border', 'border-red-200');
+                document.getElementById('feedback-text').innerText = "El mensaje excede el límite de 100 caracteres.";
+                return;
+            }
+
+            // Build WhatsApp message
+            let waMsg = `Hola, me interesa saber mas sobre su producto.`;
+            waMsg += `\n\nNombre: ${name}`;
+            waMsg += `\nTeléfono: ${phone}`;
+            waMsg += `\nAsunto: ${subject}`;
+            waMsg += `\nMensaje: ${message}`;
+
+            const phoneNumber = '59162686461'; // target without +
+            const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMsg)}`;
+
+            // Open WhatsApp in new tab/window
+            window.open(waUrl, '_blank');
+
+            // Show feedback to user and reset form
+            feedbackBox.classList.remove('hidden', 'bg-red-50', 'text-red-800');
+            feedbackBox.classList.add('bg-emerald-50', 'text-emerald-800', 'border', 'border-emerald-200');
+            document.getElementById('feedback-text').innerText = "Redirigiendo a WhatsApp...";
+
+            form.reset();
+
+            // Auto hide after 8 seconds
+            setTimeout(() => {
+                feedbackBox.classList.add('hidden');
+            }, 8000);
+        }
+
+        // Newsletter Handler
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('newsletter-feedback');
+            const input = document.getElementById('newsletter-email');
+
+            feedback.classList.remove('hidden');
+            input.value = '';
+
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 5000);
+        }
+
+        // Hero Crossfade Slider
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+
+        function showNextSlide() {
+            slides[currentSlideIndex].classList.remove('opacity-100');
+            slides[currentSlideIndex].classList.add('opacity-0');
+
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+            slides[currentSlideIndex].classList.remove('opacity-0');
+            slides[currentSlideIndex].classList.add('opacity-100');
+        }
+
+        setInterval(showNextSlide, 1000); // 1 second interval
+    </script>
+</body>
+
+</html>
